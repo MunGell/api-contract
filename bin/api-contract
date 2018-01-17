@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+const path = require('path');
+const validateApi = require('../src');
+
+if (process.argv.length > 2) {
+    try {
+        const configs = require(path.resolve(process.argv[2]));
+
+        configs.forEach(config => {
+            validateApi(config.method, config.endpoint, require(path.resolve(config.schema)), config.data, config.config)
+                .then(result => {
+                    if (!result) {
+                        console.warn(`Mismatch in ${config.endpoint}`);
+                    }
+                }, error => {
+                    console.error(error);
+                });
+        })
+    } catch (err) {
+        console.error(err);
+    }
+}

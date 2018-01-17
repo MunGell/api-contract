@@ -1,0 +1,7 @@
+[
+    {
+        "method": "get",
+        "endpoint": "https://api.github.com/users/MunGell",
+        "schema": "tests/test-schema.json"
+    }
+]

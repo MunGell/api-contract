@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "login": {
+            "type": "string"
+        },
+        "id": {
+            "type": "number"
+        },
+        "avatar_url": {
+            "type": "string"
+        },
+        "gravatar_id": {
+            "type": "string"
+        },
+        "url": {
+            "type": "string"
+        },
+        "html_url": {
+            "type": "string"
+        },
+        "followers_url": {
+            "type": "string"
+        }
+    },
+    "additionalProperties": true
+}

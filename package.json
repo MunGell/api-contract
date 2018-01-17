@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Simple API JSON contract validator",
   "main": "src/index.js",
+  "bin": {
+    "api-contract": "./bin/api-contract"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,5 +27,9 @@
   "bugs": {
     "url": "https://github.com/MunGell/api-contract/issues"
   },
-  "homepage": "https://github.com/MunGell/api-contract#readme"
+  "homepage": "https://github.com/MunGell/api-contract#readme",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "schema-utils": "^0.4.3"
+  }
 }
